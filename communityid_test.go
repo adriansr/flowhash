@@ -6,6 +6,7 @@ import (
 	"flag"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"net"
 	"os"
 	"path/filepath"
@@ -43,22 +44,11 @@ func TestPCAPFiles(t *testing.T) {
 			result := getFlowsFromPCAP(t, testName, file)
 
 			if *update {
-				/*data, err := json.MarshalIndent(result, "", "  ")
+				data := strings.Join(result, "")
+				err = ioutil.WriteFile(goldenName, []byte(data), 0644)
 				if err != nil {
 					t.Fatal(err)
 				}
-
-				if err = os.MkdirAll(goldenDir, 0755); err != nil {
-					t.Fatal(err)
-				}
-
-				err = ioutil.WriteFile(goldenName, data, 0644)
-				if err != nil {
-					t.Fatal(err)
-				}
-
-				return*/
-				// TODO
 			}
 
 			goldenData := readGoldenFile(t, goldenName)
