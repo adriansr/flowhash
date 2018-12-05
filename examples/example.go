@@ -1,11 +1,11 @@
-# flowhash
+package flowhash_test
 
-The flowhash Go package provides Community ID flow hashing.
+import (
+	"fmt"
+	"net"
 
-## Usage
-
-```golang
-import "github.com/adriansr/flowhash"
+	"github.com/adriansr/flowhash"
+)
 
 func ExampleCommunityIDHash() {
 	flow := flowhash.Flow{
@@ -18,4 +18,3 @@ func ExampleCommunityIDHash() {
 	fmt.Println(flowhash.CommunityID.Hash(flow))
 	// Output: 1:R7iR6vkxw+jaz3wjDfWMWooBdfc=
 }
-```

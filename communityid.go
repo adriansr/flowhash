@@ -2,6 +2,7 @@ package flowhash
 
 import (
 	"crypto"
+	_ "crypto/sha1"
 	"encoding/binary"
 	"net"
 )
