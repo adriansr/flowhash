@@ -2,6 +2,8 @@
 
 The flowhash Go package provides Community ID flow hashing.
 
+See https://github.com/corelight/community-id-spec
+
 ## Usage
 
 ```golang
