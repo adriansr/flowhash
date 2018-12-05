@@ -14,11 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/google/gopacket/layers"
-	"github.com/stretchr/testify/assert"
-
 	"github.com/google/gopacket"
+	"github.com/google/gopacket/layers"
 	"github.com/google/gopacket/pcap"
+	"github.com/stretchr/testify/assert"
 )
 
 const (
